@@ -25,3 +25,14 @@ routes.route('/performers').get(function(req, res) {
     }
   })
 });
+
+routes.route('/add').post(function(req, res) {
+  let performer = new Perfomer(req.body);
+  performer.save()
+    .then(performer => {
+      res.status(200).json({'performer' : 'performer added sucessfully'});
+    })
+    .catch(err => {
+      res.status(400).send('adding performer failed');
+    });
+});
