@@ -6,4 +6,5 @@ let Performer = new schema({
   style: String,
   price: String,
   description: String,
+  booked: Boolean
 });
