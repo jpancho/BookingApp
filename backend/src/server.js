@@ -15,3 +15,13 @@ const connection = mongoose.connection;
 connection.once('open', function() {
   console.log("MongoDB connection established successfully");
 });
+
+routes.route('/performers').get(function(req, res) {
+  Perfomer.find(function(err, performers) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(performers);
+    }
+  })
+});
