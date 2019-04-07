@@ -8,3 +8,5 @@ let Performer = new schema({
   description: String,
   booked: Boolean
 });
+
+module.exports = mongoose.model('Performer', Performer);
