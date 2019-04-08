@@ -1,7 +1,8 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
-const mongoose= require('mongoose');
+const mongoose = require('mongoose');
 const routes = express.Router();
 const PORT = 3001;
 
@@ -35,4 +36,9 @@ routes.route('/add').post(function(req, res) {
     .catch(err => {
       res.status(400).send('adding performer failed');
     });
+});
+
+app.use('/', routes);
+app.listen(PORT, function() {
+  console.log("Server running on Port: " + PORT);
 });
