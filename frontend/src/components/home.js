@@ -54,18 +54,73 @@ export default class Home extends Component {
 
   onSubmit(e) {
     e.preventDefault();
+
     const newPerformer = {
       name: this.state.name,
       style: this.state.style,
       price: this.state.price,
       description: this.state.description,
       booked: this.state.booked
-    }
+    };
+
+    let addPath = 'http://localhost:3001/add';
+    axios.post(addPath, newPerformer)
+      .then(res => console.log(res.data));
+
+    this.setState({
+      name: '',
+      style: '',
+      price: '',
+      description: '',
+      booked: false
+    })
   }
 
   render() {
     return (
-      <h3>Home component</h3>
+      <div style={{marginTop: 15}}>
+        <h3>Add Performer</h3>
+        <form onSubmit={this.onSubmit}>
+          <div className="form-group">
+            <label>Name: </label>
+            <input type="text"
+                   className="form-control"
+                   value={this.state.name}
+                   onChange={this.onChangeName}
+            />
+          </div>
+          <div className="form-group">
+            <label>Style: </label>
+            <input type="text"
+                   className="form-control"
+                   value={this.state.style}
+                   onChange={this.onChangeStyle}
+            />
+          </div>
+          <div className="form-group">
+            <label>Price: </label>
+            <input type="text"
+                   className="form-control"
+                   value={this.state.price}
+                   onChange={this.onChangePrice}
+            />
+          </div>
+          <div className="form-group">
+            <label>Description: </label>
+            <input type="text"
+                   className="form-control"
+                   value={this.state.description}
+                   onChange={this.onChangeDescription}
+            />
+          </div>
+          <div className="form-group">
+            <input type="submit"
+                   value="Add Performer"
+                   className="btn btn-primary"
+            />
+          </div>
+        </form>
+      </div>
     )
   }
 }
