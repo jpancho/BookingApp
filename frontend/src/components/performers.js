@@ -8,7 +8,7 @@ const Performer = props => (
     <td>{props.performer.style}</td>
     <td>{props.performer.price}</td>
     <td>{props.performer.description}</td>
-    <td>{props.performer.booked}</td>
+    <td>{String(props.performer.booked)}</td>
   </tr>
 );
 
@@ -40,7 +40,7 @@ export default class Performers
   render() {
     return (
       <div>
-        <h3>Performers component</h3>
+        <h3>Performers</h3>
         <table className="table" style={{ marginTop: 20}}>
           <thead>
             <tr>
