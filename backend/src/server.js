@@ -38,6 +38,27 @@ routes.route('/add').post(function(req, res) {
     });
 });
 
+routes.route('/update/:id').post(function(req, res) {
+  Perfomer.findById(req.params.id, function(err, performer) {
+    if (!performer) {
+      res.status(404).send('data is not found');
+    } else {
+      performer.name = req.body.name;
+      performer.style = req.body.style;
+      performer.price = req.body.price;
+      performer.description = req.body.description;
+      performer.booked = req.body.booked;
+
+      performer.save().then(performer => {
+        res.json('Performer updated');
+      })
+      .catch(err => {
+        res.status(400).send("Update not possible");
+      });
+    }
+  });
+});
+
 app.use('/', routes);
 app.listen(PORT, function() {
   console.log("Server running on Port: " + PORT);
