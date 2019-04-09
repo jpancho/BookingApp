@@ -31,6 +31,17 @@ export default class Performers
       })
   }
 
+  componentDidUpdate() {
+    let performerPath = 'http://localhost:3001/performers';
+    axios.get(performerPath)
+      .then(res => {
+        this.setState({performers: res.data});
+      })
+      .catch(function(err) {
+        console.log(err);
+      })
+  }
+
   performerList() {
     return this.state.performers.map(function(current, i) {
       return <Performer performer={current} key={i} />;
