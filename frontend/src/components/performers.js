@@ -6,6 +6,9 @@ const Performer = props => (
   <tr>
     <td>{props.performer.name}</td>
     <td>{props.performer.style}</td>
+    <td>{props.performer.price}</td>
+    <td>{props.performer.description}</td>
+    <td>{props.performer.booked}</td>
   </tr>
 );
 
@@ -38,15 +41,18 @@ export default class Performers
     return (
       <div>
         <h3>Performers component</h3>
-        <table className="table table-striped" style={{ marginTop: 20}}>
+        <table className="table" style={{ marginTop: 20}}>
           <thead>
             <tr>
               <th>Name</th>
               <th>Style</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th>Booked</th>
             </tr>
           </thead>
           <tbody>
-            { this.performerList() }
+            {this.performerList()}
           </tbody>
         </table>
       </div>
