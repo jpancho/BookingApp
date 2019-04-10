@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router , Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
@@ -32,7 +32,7 @@ class App extends Component {
           </nav>
           <Route path="/" exact component={Home} />
           <Route path="/performers" component={Performers} />
-          <Route path="/bookings" component={Bookings} />
+          <Route path="/bookings/:id" component={Bookings} />
         </div>
       </Router>
     );

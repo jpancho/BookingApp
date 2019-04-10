@@ -13,6 +13,10 @@ export default class Bookings extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
+      name: '',
+      style: '',
+      price: '',
+      description: '',
       booked: false
     }
   }
@@ -31,7 +35,8 @@ export default class Bookings extends Component {
       })
       .catch(function(err) {
         console.log(err);
-      })
+      });
+    console.log(this.state);
   }
 
   onChangeName(e) {

@@ -9,7 +9,7 @@ const PORT = 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
-let Perfomer = require('./schema');
+const Perfomer = require('./schema');
 mongoose.connect('mongodb://127.0.0.1:27017/performers', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
@@ -27,10 +27,10 @@ routes.route('/performers').get(function(req, res) {
   })
 });
 
-routes.route('/performers/:id').get(function(req, res){
+routes.route('/performers/:id').get(function(req, res) {
   let id = req.params.id;
-  Performer.findById(id, function(err, performer) {
-    res.json(todo);
+  Perfomer.findById(id, function(err, performer) {
+    res.json(performer);
   });
 });
 
