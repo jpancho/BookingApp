@@ -1,16 +1,19 @@
 Booking Application
 
-In the project directory, you can run:
+In the frontend directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+In the backend source directory, you can run:
 ### `node server`
 
 Runs the server. <br>
-Open [http://localhost:3001](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+
+In the project directory, you can run:
 
 ### `"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"`
 
