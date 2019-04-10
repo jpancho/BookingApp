@@ -73,7 +73,9 @@ export default class Home extends Component {
       price: '',
       description: '',
       booked: false
-    })
+    });
+
+    this.props.history.push('/performers');
   }
 
   render() {

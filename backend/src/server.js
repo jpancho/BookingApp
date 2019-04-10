@@ -55,14 +55,25 @@ routes.route('/update/:id').post(function(req, res) {
       performer.price = req.body.price;
       performer.description = req.body.description;
       performer.booked = req.body.booked;
-      performer.save().then(performer => {
-        res.json('Performer updated');
+      performer.save()
+        .then(performer => {
+          res.json('Performer updated');
       })
-      .catch(err => {
-        res.status(400).send("Update not possible");
+        .catch(err => {
+          res.status(400).send("Update not possible");
       });
     }
   });
+});
+
+routes.route('/delete/:id').delete(function(req, res) {
+  Perfomer.findOneAndDelete(req.params.id, function(err, performer) {
+    if (!performer) {
+      res.status(404).send('data is not found');
+    } else {
+      res.status(200).send(performer);
+    }
+  })
 });
 
 app.use('/', routes);

@@ -10,7 +10,8 @@ export default class Bookings extends Component {
     this.onChangePrice = this.onChangePrice.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeBooked = this.onChangeBooked.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onSubmitBooking = this.onSubmitBooking.bind(this);
+    this.onSubmitDelete = this.onSubmitDelete.bind(this);
 
     this.state = {
       name: '',
@@ -69,7 +70,7 @@ export default class Bookings extends Component {
     });
   }
 
-  onSubmit(e) {
+  onSubmitBooking(e) {
     e.preventDefault();
     const performer = {
       name: this.state.name,
@@ -86,15 +87,29 @@ export default class Bookings extends Component {
     this.props.history.push('/performers');
   }
 
+  onSubmitDelete(e) {
+    e.preventDefault();
+    let deletePath = 'http://localhost:3001/delete/' + this.props.match.params.id;
+    axios.delete(deletePath)
+      .then(res => console.log(res.data));
+
+    this.props.history.push('/performers');
+  }
+
   render() {
     return (
       <div>
         <h3>Book</h3>
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmitBooking}>
           <input type="submit"
                  value="Book"
                  className="btn btn-primary"
-                 onClick={this.onChangeBooked}/>
+                 onClick={this.onChangeBooked} />
+        </form>
+        <form onSubmit={this.onSubmitDelete}>
+          <input type="submit"
+                 value="Delete"
+                 className="btn btn-danger" />
         </form>
       </div>
     )

@@ -12,6 +12,9 @@ const Performer = props => (
     <td>
       <Link to={"/bookings/" + props.performer._id}>Book</Link>
     </td>
+    <td>
+      <Link to={"/bookings/" + props.performer._id}>Remove</Link>
+    </td>
   </tr>
 );
 
@@ -66,6 +69,7 @@ export default class Performers
               <th>Description</th>
               <th>Booked</th>
               <th>Book?</th>
+              <th>Admin Remove</th>
             </tr>
           </thead>
           <tbody>
