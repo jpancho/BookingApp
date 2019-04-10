@@ -27,6 +27,13 @@ routes.route('/performers').get(function(req, res) {
   })
 });
 
+routes.route('/performers/:id').get(function(req, res){
+  let id = req.params.id;
+  Performer.findById(id, function(err, performer) {
+    res.json(todo);
+  });
+});
+
 routes.route('/add').post(function(req, res) {
   let performer = new Perfomer(req.body);
   performer.save()
@@ -48,7 +55,6 @@ routes.route('/update/:id').post(function(req, res) {
       performer.price = req.body.price;
       performer.description = req.body.description;
       performer.booked = req.body.booked;
-
       performer.save().then(performer => {
         res.json('Performer updated');
       })

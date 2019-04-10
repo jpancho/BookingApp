@@ -9,6 +9,9 @@ const Performer = props => (
     <td>{props.performer.price}</td>
     <td>{props.performer.description}</td>
     <td>{String(props.performer.booked)}</td>
+    <td>
+      <Link to={"/bookings/" + props.performer._id}>Book</Link>
+    </td>
   </tr>
 );
 
@@ -44,7 +47,9 @@ export default class Performers
 
   performerList() {
     return this.state.performers.map(function(current, i) {
-      return <Performer performer={current} key={i} />;
+      return (
+        <Performer performer={current} key={i}/>
+      )
     });
   }
 
@@ -60,6 +65,7 @@ export default class Performers
               <th>Price</th>
               <th>Description</th>
               <th>Booked</th>
+              <th>Book?</th>
             </tr>
           </thead>
           <tbody>
