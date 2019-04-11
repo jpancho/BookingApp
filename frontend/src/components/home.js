@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+/**
+ * In home, we have a form that takes in input to add a performer
+ * to our database. This is an example of POST.
+ */
 export default class Home extends Component {
 
   constructor(props) {

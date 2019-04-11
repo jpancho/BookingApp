@@ -18,6 +18,12 @@ const Performer = props => (
   </tr>
 );
 
+/**
+ * In performers, we are listing out all of the performers in our database.
+ * This is an example of GET.
+ * We are also able to individually get performers.
+ * This is an example of GET with an id.
+ */
 export default class Performers
   extends Component {
 

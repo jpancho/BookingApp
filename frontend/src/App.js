@@ -8,9 +8,8 @@ import Performers from "./components/performers";
 import Bookings from "./components/bookings";
 
 /**
- * This react application has three main routes, /, /performers, and /bookings
- * For this assignment, we will focus on the performers route which our react app at
- * localhost:3000 will GET the json object sent by our backend to localhost:3001
+ * This react application has three main routes, /, /performers, and /bookings/:id
+ * Look into /components to see what each route renders and each API call
  */
 class App extends Component {
   render() {

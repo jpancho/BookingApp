@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+/**
+ * In bookings, we are updating current performers "booked" boolean
+ * from false to true. This is an example of an UPDATE.
+ * We can also delete a performer.
+ * This is an example of DELETE.
+ */
 export default class Bookings extends Component {
 
   constructor(props) {

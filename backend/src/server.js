@@ -6,6 +6,11 @@ const mongoose = require('mongoose');
 const routes = express.Router();
 const PORT = 3001;
 
+/**
+ * This is our backend. We use cors and body-parser for resource sharing
+ * and parsing middleware. We also run our MongoDB through mongoose connection.
+ * Our database schema can be found in /schema.js.
+ */
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -17,6 +22,9 @@ connection.once('open', function() {
   console.log("MongoDB connection established successfully");
 });
 
+/**
+ * All of these are our API implementations. Updates our database using mongoose.
+ */
 routes.route('/performers').get(function(req, res) {
   Perfomer.find(function(err, performers) {
     if (err) {
