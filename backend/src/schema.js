@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-// "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe" mongo instance
-// "C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe" --dbpath="c:\data\db" mongod instance
-
+// This is our mongo schema, a json object Performer that 
+// has name, style, price, description, booked.
 let Performer = new schema({
   name: String,
   style: String,
