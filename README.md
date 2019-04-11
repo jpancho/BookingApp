@@ -28,3 +28,7 @@ Runs the mongo instance. <br>
 
 Runs the mongod instance. <br>
 Make sure to create the db path first.
+
+Initialization is done! <br>
+
+You can add, list, book, and delete performers.
