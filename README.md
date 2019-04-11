@@ -1,4 +1,9 @@
-Booking Application
+Booking Application created with React, NodeJS, Express, and MongoDB 
+
+Have React, NodeJS and MongoDB installed. <br>
+In the frontend and backend directory, run to install packages:
+
+### `npm install`
 
 In the frontend directory, you can run:
 
