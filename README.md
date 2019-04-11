@@ -1,6 +1,10 @@
-Booking Application created with React, NodeJS, Express, and MongoDB 
+Booking Application created with React, Node, Express, and MongoDB 
 
-Have React, NodeJS and MongoDB installed. <br>
+React is a frontend framework used to design SPA's, files under `frontend/src` <br>
+Node is a backend framework in conjunction with Express to build the API, server found in `backend/src/server.js` <br>
+MongoDB is a NoSQL database, schema is found in `backend/src/schema.js`
+
+Have React, Node and MongoDB installed. <br>
 In the frontend and backend directory, run to install packages:
 
 ### `npm install`
