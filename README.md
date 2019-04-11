@@ -1,15 +1,15 @@
 Booking Application created with React, Node, Express, and MongoDB 
 
-React is a frontend framework used to design SPA's, files under `frontend/src` <br>
-Node is a backend framework in conjunction with Express to build the API, server found in `backend/src/server.js` <br>
-MongoDB is a NoSQL database, schema is found in `backend/src/schema.js`
+React is a frontend framework used to design SPA's, files under `/frontend/src` <br>
+Node is a backend framework in conjunction with Express to build the API, server found in `/backend/src/server.js` <br>
+MongoDB is a NoSQL database, schema is found in `/backend/src/schema.js`
 
 Have React, Node and MongoDB installed. <br>
-In the frontend and backend directory, run to install packages:
+In the `/frontend/` and `/backend/`, run to install packages:
 
 ### `npm install`
 
-In the frontend directory, you can run:
+In `/frontend/`, you can run:
 
 ### `npm start`
 
@@ -20,7 +20,7 @@ In the backend source directory, you can run:
 ### `node server`
 
 Runs the server. <br>
-Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+Runs in [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 In the project directory, you can run:
 
@@ -36,3 +36,4 @@ Make sure to create the db path first.
 Initialization is done! <br>
 
 You can add, list, book, and delete performers.
+Routes include `/`, `/performers`, `performers:id`, and `bookings/:id`
