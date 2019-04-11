@@ -39,3 +39,22 @@ You can add, list, book, and delete performers.<br>
 This covers CREATE, READ, UPDATE, and DELETE. <br>
 Frontend routes include `/`, `/performers`, `performers:id`, and `bookings/:id`<br>
 API routes include `/performers`, `/performers/:id`, `/add`, `/update:id`, and `/delete:id`<br>
+
+The implementation of backend API. <br>
+```js routes.route('/add').post(function(req, res) {
+  let performer = new Perfomer(req.body);
+  performer.save()
+    .then(performer => {
+      res.status(200).json({'performer' : 'performer added sucessfully'});
+    })
+    .catch(err => {
+      res.status(400).send('adding performer failed');
+    });
+});
+```
+
+An example of using the backend API to POST in the UI. <br>
+```js    let addPath = 'http://localhost:3001/add';
+    axios.post(addPath, newPerformer)
+      .then(res => console.log(res.data));
+```
