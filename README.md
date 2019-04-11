@@ -37,4 +37,5 @@ Initialization is done! <br>
 
 You can add, list, book, and delete performers.<br>
 This covers CREATE, READ, UPDATE, and DELETE. <br>
-Routes include `/`, `/performers`, `performers:id`, and `bookings/:id`
+Frontend routes include `/`, `/performers`, `performers:id`, and `bookings/:id`<br>
+API routes include `/performers`, `/performers/:id`, `/add`, `/update:id`, and `/delete:id`<br>
