@@ -35,5 +35,5 @@ Make sure to create the db path first.
 
 Initialization is done! <br>
 
-You can add, list, book, and delete performers.
+You can add, list, book, and delete performers.<br>
 Routes include `/`, `/performers`, `performers:id`, and `bookings/:id`
