@@ -24,22 +24,23 @@ In `/backend/src`, you can run:
 Runs the server. <br>
 Runs in [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
-In the project directory, you can run:
+In the project directory, run the [mongo instance](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#start-mdb-edition-as-a-windows-service):
 
 ### `"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"`
 
-Runs the mongo instance. <br>
-
+In the project directory, [run the mongod instance](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mdb-edition-from-the-command-interpreter).
 ### `"C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe" --dbpath="c:\data\db"`
 
-Runs the mongod instance. <br>
-Make sure to create the db path first.
+Follow the links closely.
+We must run two instances so our MongoDB works and updates.
 
 Initialization is done! <br>
 
 This covers CREATE, READ, UPDATE, and DELETE. <br>
 Frontend routes include `/`, `/performers`, `performers:id`, and `bookings/:id`<br>
+  Find in `frontend/src/App.js` <br>
 API routes include `/performers`, `/performers/:id`, `/add`, `/update:id`, and `/delete:id`<br>
+  Find in `backend/src/server.js`<br>
 
 The implementation of backend API using Mongoose and Express. <br>
 Mongoose "provides a straight-forward, schema-based solution to model your application data.- <br>
@@ -47,7 +48,7 @@ It includes built-in type casting, validation, query building, business logic ho
 Express "is a minimal and flexible Node.js web application framework that provides- <br>
 a robust set of features for web and mobile applications."
 ```js routes.route('/add').post(function(req, res) {
-  let performer = new Perfomer(req.body);
+let performer = new Perfomer(req.body);
   performer.save()
     .then(performer => {
       res.status(200).json({'performer' : 'performer added sucessfully'});
@@ -61,7 +62,8 @@ a robust set of features for web and mobile applications."
 An example of using the backend API to POST in the UI using Axios. <br>
 Axios is a promise based HTTP client for the browser and node.js. <br>
 Most of our RESTful calls will be found under `/frontend/src/components/`.
-```js    let addPath = 'http://localhost:3001/add';
-    axios.post(addPath, newPerformer)
-      .then(res => console.log(res.data));
+```js    
+let addPath = 'http://localhost:3001/add';
+  axios.post(addPath, newPerformer)
+    .then(res => console.log(res.data));
 ```
