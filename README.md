@@ -5,7 +5,7 @@ You can add, list, book, and delete performers.<br>
 
 React is a frontend framework used to design SPA's, files under `/frontend/src` <br>
 Node is a backend framework in conjunction with Express to build the API, server found in `/backend/src/server.js` <br>
-MongoDB is a NoSQL database, schema is found in `/backend/src/performer.js`
+MongoDB is a NoSQL database, schema is found in `/backend/src/model/performer.js`
 
 # Project Installation
 Have [React](https://reactjs.org/), [Node](https://nodejs.org/en/) and [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) installed. <br>
