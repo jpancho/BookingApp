@@ -6,6 +6,7 @@ import './App.css';
 import Home from "./components/home";
 import Performers from "./components/performers";
 import Bookings from "./components/bookings";
+import Signup from "./components/signup";
 
 /**
  * This react application has three main routes, /, /performers, and /bookings/:id
@@ -26,10 +27,14 @@ class App extends Component {
                 <li className="navbar-item">
                   <Link to="/bookings" className="nav-link">Bookings</Link>
                 </li>
+                <li className="navbar-item">
+                  <Link to="/signup" className="nav-link">Sign-up</Link>
+                </li>
               </ul>
             </div>
           </nav>
           <Route path="/" exact component={Home} />
+          <Route path="/signup" component={Signup} />
           <Route path="/performers" component={Performers} />
           <Route path="/bookings/:id" component={Bookings} />
         </div>
