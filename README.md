@@ -19,11 +19,12 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 In `/backend`, you can run:
-### `npm run server`
+### `npm run start`
 
-Runs the server. <br>
+Runs the server, mongod, and mongo instances. <br>
 Runs in [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
+Don't have to run mongo instances individually anymore so skip, but read through how it gets started. <br>
 In the project directory, run the [mongo instance](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#start-mdb-edition-as-a-windows-service):
 
 ### `"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"`
