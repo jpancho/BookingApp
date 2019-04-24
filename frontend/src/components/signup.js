@@ -11,7 +11,7 @@ export default class Signup extends Component {
         <React.Fragment>
           <AppBar title="Enter User Details" />
           <TextField
-            hintText="Enter Your Name"
+            hintText="Username"
           />
         </React.Fragment>
       </MuiThemeProvider>
