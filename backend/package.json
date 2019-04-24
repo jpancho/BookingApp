@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.22",
+    "nodemon": "^1.18.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init-server": "nodemon src/server.js",
+    "init-mongo": "\"\"C:\\Program Files\\MongoDB\\Server\\4.0\\bin\\mongo.exe\"\"",
+    "init-mongod": "\"\"C:\\Program Files\\MongoDB\\Server\\4.0\\bin\\mongod.exe\" --dbpath=\"c:\\data\\db\"\"",
+    "start": "start npm run init-server && start npm run init-mongo && start npm run init-mongod"
+  },
+  "author": "",
+  "license": "ISC"
+}

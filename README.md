@@ -3,7 +3,7 @@ You can add, list, book, and delete performers.<br>
 
 React is a frontend framework used to design SPA's, files under `/frontend/src` <br>
 Node is a backend framework in conjunction with Express to build the API, server found in `/backend/src/server.js` <br>
-MongoDB is a NoSQL database, schema is found in `/backend/src/schema.js`
+MongoDB is a NoSQL database, schema is found in `/backend/src/performer.js`
 
 Have [React](https://reactjs.org/), [Node](https://nodejs.org/en/) and [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) installed. <br>
 In the `/frontend/` and `/backend/`, run to install packages:
@@ -18,12 +18,13 @@ In `/frontend/`, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-In `/backend/src`, you can run:
-### `node server`
+In `/backend`, you can run:
+### `npm run start`
 
-Runs the server. <br>
+Runs the server, mongod, and mongo instances. <br>
 Runs in [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
+Don't have to run mongo instances individually anymore so skip, but read through how it gets started. <br>
 In the project directory, run the [mongo instance](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#start-mdb-edition-as-a-windows-service):
 
 ### `"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"`
