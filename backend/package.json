@@ -13,8 +13,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js",
-    "server": "nodemon src/server.js"
+    "init-server": "nodemon src/server.js",
+    "init-mongo": "\"\"C:\\Program Files\\MongoDB\\Server\\4.0\\bin\\mongo.exe\"\"",
+    "init-mongod": "\"\"C:\\Program Files\\MongoDB\\Server\\4.0\\bin\\mongod.exe\" --dbpath=\"c:\\data\\db\"\"",
+    "start": "start npm run init-server && start npm run init-mongo && start npm run init-mongod"
   },
   "author": "",
   "license": "ISC"
