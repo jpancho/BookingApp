@@ -1,3 +1,5 @@
+# Project Description
+
 Booking Application created with React, Node, Express, and MongoDB.<br>
 You can add, list, book, and delete performers.<br>
 
@@ -5,6 +7,7 @@ React is a frontend framework used to design SPA's, files under `/frontend/src` 
 Node is a backend framework in conjunction with Express to build the API, server found in `/backend/src/server.js` <br>
 MongoDB is a NoSQL database, schema is found in `/backend/src/performer.js`
 
+# Project Installation
 Have [React](https://reactjs.org/), [Node](https://nodejs.org/en/) and [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) installed. <br>
 In the `/frontend/` and `/backend/`, run to install packages:
 
@@ -68,3 +71,4 @@ let addPath = 'http://localhost:3001/add';
   axios.post(addPath, newPerformer)
     .then(res => console.log(res.data));
 ```
+# Todo
