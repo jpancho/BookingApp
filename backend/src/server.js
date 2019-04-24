@@ -9,12 +9,12 @@ const PORT = 3001;
 /**
  * This is our backend. We use cors and body-parser for resource sharing
  * and parsing middleware. We also run our MongoDB through mongoose connection.
- * Our database schema can be found in /schema.js.
+ * Our database schema can be found in /performer.js.
  */
 app.use(cors());
 app.use(bodyParser.json());
 
-const Perfomer = require('./schema');
+const Perfomer = require('./models/performer');
 mongoose.connect('mongodb://127.0.0.1:27017/performers', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
