@@ -84,7 +84,6 @@ routes.route('/delete/:id').delete(function(req, res) {
   })
 });
 
-app.use('/', routes);
 app.listen(PORT, function() {
   console.log("Server running on Port: " + PORT);
 });
